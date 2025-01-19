@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilos globales para la aplicación */
+/* Paleta de colores globales -> identificamos colores precisos con una palabra */
+:root{
+    --negro: #000;
+    --blanco: #FFF;
+}
+
+.titulo{
+    color: var(--negro);
+
+    text-align: center;
+
+    font-size: 4em;
+}
+
+.container{
+    /*
+        1: arriba, 2: derecha, 3: abajo, 4: izquierda
+    */
+    padding: 0.2rem 2.5rem 0.2rem 2.5rem;
+}
