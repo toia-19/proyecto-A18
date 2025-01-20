@@ -1,3 +1,7 @@
-.subtitulo{
+.titulo{
+    font-size: 2.2em;
+}
+
+.texto{
     text-align: center;
 }

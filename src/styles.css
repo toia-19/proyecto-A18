@@ -9,13 +9,14 @@
     color: var(--negro);
 
     text-align: center;
-
-    font-size: 4em;
 }
 
 .container{
     /*
         1: arriba, 2: derecha, 3: abajo, 4: izquierda
     */
-    padding: 0.2rem 2.5rem 0.2rem 2.5rem;
+    padding: 1rem 2.5rem 1rem 2.5rem;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
