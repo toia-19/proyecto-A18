@@ -1,0 +1,25 @@
+<div class="formulario">
+    <form action="" class="form">
+        <mat-form-field>
+            <mat-label>Ingrese su nombre de usuario:</mat-label>
+            <input [(ngModel)]="user.username" name="username" matInput required>
+        </mat-form-field>
+    
+        <mat-form-field hintLabel="Max 10 caracteres">
+            <mat-label>Ingrese su contraseña:</mat-label>
+            <input [(ngModel)]="user.password" name="password" matInput [type]="hide() ? 'password' : 'text'" #input maxlength="10" required/>
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="clickEvent($event)"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide()"
+            >
+              <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-hint align="end">{{value().length}}/10</mat-hint>
+          </mat-form-field>
+
+          <button mat-button type="submit" class="btn-enviar">Enviar</button>
+    </form>
+</div>

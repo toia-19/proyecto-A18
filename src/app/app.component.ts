@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 // Componentes globales
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -10,6 +10,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
   selector: 'app-root',
   standalone: true,
   imports: [
+    RouterLink,
     RouterOutlet,
     NavbarComponent,
     FooterComponent
