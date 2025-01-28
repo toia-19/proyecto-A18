@@ -3,7 +3,35 @@
         <div class="col">
             <h1 class="titulo">Registro</h1>
 
-            <app-form></app-form>
+            <div class="formulario">
+                <form action="" class="form">
+                  <!-- Nombre de usuario -->
+                  <mat-form-field>
+                      <mat-label>Ingrese su nombre de usuario:</mat-label>
+                      <input [(ngModel)]="user.username" name="username" matInput required>
+                  </mat-form-field>
+                
+                  <!-- Contraseña -->
+                  <mat-form-field hintLabel="Min 6 caracteres">
+                    <mat-label>Ingrese su contraseña:</mat-label>
+                    <input [(ngModel)]="user.password" name="password" matInput [type]="hide() ? 'password' : 'text'"
+                     #input minlength="6" (input)="onInput($event)" required/>
+                    <button
+                      mat-icon-button
+                      matSuffix
+                      (click)="clickEvent($event)"
+                      [attr.aria-label]="'Hide password'"
+                      [attr.aria-pressed]="hide()"
+                    >
+                    <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-hint align="end">{{value().length}}/6</mat-hint>
+                  </mat-form-field>
+            
+                  <!-- Botón de envío de datos -->
+                  <button mat-button type="submit" class="btn-enviar" (click)="registrar()">Enviar</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
